@@ -1,0 +1,37 @@
+<nav class="tablero">
+    <div class="preguntas" *ngIf="preguntaActual < 10">
+        <h2>Question N.{{preguntaActual + 1}}</h2>
+        <h2 class="pregunta" [innerHTML]="pregunta"></h2>
+        <p (click)="responder(respuestas[0])" class="respuesta" [innerHTML]="respuestas[0]"></p>
+        <p (click)="responder(respuestas[1])" class="respuesta" [innerHTML]="respuestas[1]"></p>
+        <p (click)="responder(respuestas[2])" class="respuesta" [innerHTML]="respuestas[2]"></p>
+        <p (click)="responder(respuestas[3])" class="respuesta" [innerHTML]="respuestas[3]"></p>
+    </div>
+
+    <div class="preguntas" *ngIf="preguntaActual >= 10">
+        <h2>Results</h2>
+        <h3>Mode: {{dificultad}} - Category: {{nombreCategoria}}</h3>
+        <span class="cajaPreRes" *ngFor="let resultado of resultados">    
+        <div *ngIf="resultado.correcta == resultado.seleccion; else error" class="acierto">
+            <h4 [innerHTML]="resultado.pregunta"></h4>
+            <h5>Selected question:</h5>
+            <h6 [innerHTML]="resultado.seleccion"></h6>
+            <h5>Correct question:</h5>
+            <h6 [innerHTML]="resultado.correcta"></h6>
+        </div>
+        <ng-template #error>
+            <div class="error">
+                <h4 [innerHTML]="resultado.pregunta"></h4>
+                <h5>Selected question:</h5>
+                <h6 [innerHTML]="resultado.seleccion"></h6>
+                <h5>Correct question:</h5>
+                <h6 [innerHTML]="resultado.correcta"></h6>
+            </div>
+        </ng-template>
+        </span>
+        <p class="aciertos">Hits: {{aciertos}}/10</p>
+        <div class="botonesRestart">
+            <p [routerLink]="['/Opciones']">Return</p>
+        </div>
+    </div>
+</nav>

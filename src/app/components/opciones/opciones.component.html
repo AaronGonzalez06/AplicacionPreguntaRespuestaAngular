@@ -1,0 +1,20 @@
+<nav class="accion">
+    <div class="seleccion">
+        <h3>Category</h3>
+        <select name="categoria" [(ngModel)]="categoria" class="form-select" aria-label="Default select example">
+            <option value='{"id":10,"categoria":"Books"}'>Books</option>
+            <option value='{"id":11,"categoria":"Film"}'>Film</option>
+            <option value='{"id":15,"categoria":"Video Games"}'>Video Games</option>
+            <option value='{"id":17,"categoria":"Science & Nature"}'>Science & Nature</option>
+            <option value='{"id":23,"categoria":"History"}'>History</option>
+            <option value='{"id":21,"categoria":"Sport"}'>Sport</option>
+          </select>
+          <h3>Mode</h3>
+          <select name="dificultad" [(ngModel)]="dificultad" class="form-select" aria-label="Default select example">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <p (click)="empezar()" class="playBtn"><img width="30" height="30" src="https://img.icons8.com/external-dreamstale-green-shadow-dreamstale/30/external-play-interaction-dreamstale-green-shadow-dreamstale.png" alt="external-play-interaction-dreamstale-green-shadow-dreamstale"/>Empezar</p>
+    </div>
+</nav>

@@ -1,1 +1,166 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display')
+
+body
+    background-image: url('./assets/fondoTrivia.webp')
+    background-size: cover
+    font-family: 'Playfair Display', serif !important
+
+header
+    h1
+        font-size: 123px
+        color: #FFD700
+
+.inicio
+    background-color: #FFD700
+    width: 25%
+    height: 50px
+    border-radius: 5px
+    font-size: 32px
+    box-shadow: 2px 2px 2px gray
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: transform 0.3s
+    border: 1px solid
+
+    &:hover
+        transform: scale(1.2)
+
+.accion
+    display: flex
+    justify-content: space-around
+    margin-top: 25%
+
+.seleccion
+    background-color: #FFD700
+    border-radius: 5px
+    padding: 5px
+    box-shadow: 2px 2px 2px gray
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    border: 1px solid black
+    width: 300px
+
+.playBtn
+    background-color: #98FB98
+    border-radius: 5px
+    height: 36px
+    display: flex
+    align-items: center
+    width: 139px
+    justify-content: center
+    margin-top: 15px
+    border: 1px solid black
+    cursor: pointer
+    transition: transform 0.2s linear
+    &:hover
+        transform: scale(1.1)
+
+.tablero
+    display: flex
+    justify-content: space-around
+    margin-top: 5%
+    flex-wrap: wrap
+    max-height: 500px
+
+.preguntas
+    background-color: yellow
+    border-radius: 5px
+    padding: 5px
+    box-shadow: 2px 2px 2px gray
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    width: 60%
+    min-width: 60%
+    min-height: 205px
+    border: 1px solid black
+    padding-bottom: 2px
+    min-height: 84px
+    padding-left: 20px
+    padding-right: 20px
+
+.respuesta
+    background-color: red
+    min-width: 56%
+    max-width: 56%
+    padding: 5px
+    border: 1px solid black
+    border-radius: 5px
+    cursor: pointer
+    overflow-wrap: break-word
+    min-height: 36px
+    background-color: #2196F3
+    transition: background-color 0.2s linear, transform 0.2s linear
+    &:hover
+        transform: scale(1.1)
+        background-color: #98FB98
+
+.pregunta
+    font-size: 2rem
+    background-color: beige
+    border: 1px solid
+    border-radius: 5px
+    text-align: center
+    box-shadow: 1px 1px 1px gray
+    margin-bottom: 40px
+    margin-top: 25px
+
+.cajaPreRes
+    display: flex
+    flex-direction: column
+    width: 89%
+    text-align: center
+    padding: 8px
+    border-radius: 5px
+    border: 1px solid black
+    box-shadow: 1px 1px 1px gray
+    margin-top: 25px
+    margin-bottom: 25px
+    transition: transform 0.2s linear
+    background-color: #2196F3
+    &:hover
+        transform: scale(1.1)
+
+.aciertos
+    background-color: #2196F3
+    padding: 5px
+    font-size: 24px
+    border-radius: 5px
+    border: 1px solid
+    box-shadow: 1px 1px 1px gray
+
+.error
+    background-color: #FF6F61
+
+.acierto
+    background-color: #98FB98
+
+.botonesRestart
+    display: flex
+    font-size: 22px
+    padding: 5px
+    margin-top: 10px
+    margin-bottom: 15px
+    background-color: #2196F3
+    border: 1px solid
+    border-radius: 5px
+    box-shadow: 1px 1px 1px gray
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
+    width: 218px
+    height: 58px
+    p
+        background-color: #98FB98
+        border: 1px solid
+        padding: 3px
+        box-shadow: 1px 1px 1px gray
+        border-radius: 5px
+        cursor: pointer
